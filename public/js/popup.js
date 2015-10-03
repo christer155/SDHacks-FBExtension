@@ -1,4 +1,6 @@
-Parse.initialize("Z3nuFrbx6y0SePEppNU6hx0tw3OrnkF7jPT6qgrD", "OKCMZeIYJjH4wf0UYmGZjdCOFqWykIIksNFmtpeg");
+// Parse.initialize("Z3nuFrbx6y0SePEppNU6hx0tw3OrnkF7jPT6qgrD", "OKCMZeIYJjH4wf0UYmGZjdCOFqWykIIksNFmtpeg");
+console.log("Extension running");
+
 
 function getCurrentTabUrl(callback) {
   // Query filter to be passed to chrome.tabs.query - see
@@ -31,13 +33,27 @@ function getCurrentTabUrl(callback) {
   });
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-  getCurrentTabUrl(function(url) 
-  {
-  	var fbRgx = /facebook.com\/events/;
-  	var rgxResults = url.match(fbRgx);
-    if (rgxResults != null) {
+// document.addEventListener('DOMContentLoaded', function() {
+//   getCurrentTabUrl(function(url)
+//   {
+
+ //  	var fbRgx = /facebook.com\/events/;
+ //  	var rgxResults = url.match(fbRgx);
+
+    // if (rgxResults != null) {
     	console.log("We're on a facebook events page!");
-    }
-  });
-});
+        // console.log(url);
+        var url = window.location.href;
+        var profile = $('._s0._2dpc._rw.img').attr('id');
+        var profileId = profile.split('_');
+        profileId = profileId[profileId.length-1];
+        console.log(profileId);
+
+        var urlSplit = url.split('/');
+        urlSplit = urlSplit.filter(Boolean);
+        var eventId = urlSplit[urlSplit.length-1];
+        console.log(eventId);
+  //
+    // }
+  // });
+// });
