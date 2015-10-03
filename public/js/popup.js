@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
   	var rgxResults = url.match(fbRgx);
     if (rgxResults != null) {
     	console.log("We're on a facebook events page!");
+    	
     }
   });
 });
