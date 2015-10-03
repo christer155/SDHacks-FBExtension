@@ -1,0 +1,14 @@
+{
+  "global": {
+    "parseVersion": "latest"
+  },
+  "applications": {
+    "SDHacks-Polling": {
+      "applicationId": "P3BUC8063dFf2TPicmhr9pkl9JgLh8mWfRHdpQDV",
+      "masterKey": "Guekf2P2tD6iDHFS8tyvW9uDG4bGU2u8YyjOiI5r"
+    },
+    "_default": {
+      "link": "SDHacks-Polling"
+    }
+  }
+}
